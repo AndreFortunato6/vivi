@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para o meu amor</title>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+
+   
+</div>
+<body>
+  <h1>Vivi, meu amor </h1>
+  <p> Já estamos juntos a:</p>
+   <div id="elapsedTime"></div>
+
+  <script>
+    // Data de início
+    const startDate = new Date("2022-05-04T00:00:00");
+
+    function updateElapsedTime() {
+      const now = new Date();
+      const difference = now - startDate;
+
+      if (difference < 0) {
+        document.getElementById("elapsedTime").textContent = "A data ainda não chegou!";
+        return;
+      }
+
+      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+      document.getElementById("elapsedTime").textContent =
+        `${days} dias, ${hours} horas, ${minutes} minutos, ${seconds} segundos`;
+    }
+
+    // Atualiza o contador a cada segundo
+    setInterval(updateElapsedTime, 1000);
+    updateElapsedTime();
+  </script>
+
+  <p> E, desde então, você vem me fazendo o homem mais feliz do mundo.</p>
+  <div id="primeirotexto">
+    <p>Este site foi feito pra te lembrar que você é, e sempre vai ser tudo pra mim. Mesmo nos momentos mais difíceis, quero que conte comigo pra tudo, e não me abandone nunca. É sério, não daria pra viver um dia longe de você.</p>
+  </div>
+  aqui estão algumas músicas que eu dedico a você, ou só algumas que lembram a gente:
+  <br>
+  <hr>
+ 
+  <div id="song">
+  <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6zC0mpGYwbNTpk9SKwh08f?utm_source=generator" width="50%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+  <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2kkvB3RNRzwjFdGhaUA0tz?utm_source=generator" width="50%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+  <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3pOrSBBROCUhA3mDiJRGk3?utm_source=generator" width="50%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+</div>
+<hr>
+
+<h1>Escolhe uma carta, momo</h1>
+<p> O resultado da sua escolha vai ser um presente (mas é segredo, e só vale pegar uma vez)</p>
+  <div class="cards-container">
+    <div class="card" data-content="Um buquê de flores!">?</div>
+    <div class="card" data-content="Uma caixa de chocolate">?</div>
+    <div class="card" data-content="Vale presente de 100 reais">?</div>
+  </div>
+  <p id="result" style="margin-top: 20px; font-size: 1.2em;"></p>
+
+  <script>
+    document.querySelectorAll(".card").forEach(card => {
+      card.addEventListener("click", function () {
+        if (this.classList.contains("revealed")) return;
+
+        // Revelar o conteúdo da carta
+        const content = this.dataset.content;
+        this.textContent = content;
+        this.classList.add("revealed");
+        document.getElementById("result").textContent = `Você escolheu: ${content}`;
+      });
+    });
+  </script>
+
+  <hr>
+  <h1> Galeria dos momos</h1>
+  <img src="vivi e eu.jpg" alt="vivi e eu">
+  <img src="vivi.jpg" alt="vivi">
+  <img src="vivi e mike.jpg" alt="vivi">
+  <img src="vivi2.jpg" alt="">
+  <br>
+
+<p>foi isso momozinha, espero que você tenha gostado, e que tenha sido uma surpresa legal. Eu decidi fazer assim por não ser muito bom escrevendo no papel, e achei mais criativo. Te amo muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito muito 
+  <br>
+  ass.momo
+</p>
+</body>
+</html>
