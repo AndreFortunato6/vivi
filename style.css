@@ -104,14 +104,13 @@ hr {
     height: auto;
     border: 10px solid white; 
     border-bottom: 40px solid white; 
-    border-radius: 8px; 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin: 0 auto; 
 }
 
 .gallery img:hover {
-    transform: scale(1.05) rotate(-2deg); /* Pequena rotação para dar dinamismo */
+    transform: scale(1.05) rotate(-2deg); 
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
