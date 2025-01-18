@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tela de Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #f1f1f1, #f768bb);
+      color: white;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .login-container {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      border-radius: 10px;
+      width: 300px;
+      text-align: center;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+    input {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      background: #c0168717;
+      color: white;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background: #e53cc0;
+    }
+    .error {
+      color: #ff47c8;
+      margin-top: 10px;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h1>Login</h1>
+    <input type="text" id="name" placeholder="Digite seu nome completo" required>
+    <button onclick="validateLogin()">Entrar</button>
+    <p class="error" id="error-message"></p>
+  </div>
+
+  <script>
+    function validateLogin() {
+      const expectedName = "Vitória Maria Diez de Arruda Rosa"; 
+      const inputName = document.getElementById("name").value.trim();
+      const errorMessage = document.getElementById("error-message");
+
+      if (inputName === "") {
+        errorMessage.textContent = "Por favor, insira seu nome.";
+        return;
+      }
+
+      if (inputName !== expectedName) {
+        errorMessage.textContent = "Nome incorreto. Tente novamente.";
+        return;
+      }
+
+      window.location.href = "vivi.html"; // Substitua pelo nome do arquivo da próxima página
+    }
+  </script>
+</body>
+</html>
+
