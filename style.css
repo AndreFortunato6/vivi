@@ -98,26 +98,30 @@ hr {
     margin: 20px 0;
     border-radius: 2px; 
   }
-
-  .gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 16px;
-    padding: 20px;
-  }
-
   .gallery img {
+    display: block;
     width: 100%;
     height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
+    border: 10px solid white; 
+    border-bottom: 40px solid white; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 auto; 
+}
 
-  .gallery img:hover {
-    transform: scale(1.05);
-    transition: transform 0.3s ease;
-  }
+.gallery img:hover {
+    transform: scale(1.05) rotate(-2deg); /* Pequena rotação para dar dinamismo */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
 
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-items: center; 
+}
 
 
   
